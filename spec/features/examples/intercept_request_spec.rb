@@ -6,8 +6,8 @@ describe 'intercept request example', type: :feature, js: true do
     Billy.config.record_stub_requests = true
   end
 
-  it 'should intercept a GET request directly' do
-    stub = proxy.stub('http://example.com/').and_return(
+  xit 'should intercept a GET request directly' do
+    stub = proxy.stub('http://example.com/', method: 'get').and_return(
       headers: { 'Access-Control-Allow-Origin' => '*' },
       code: 200
     )

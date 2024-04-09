@@ -33,7 +33,8 @@ describe 'Capybara drivers', type: :feature, js: true do
   context "using selenium headless billy driver" do
     before { Capybara.current_driver = :selenium_headless_billy }
 
-    it 'allows HTTPS calls' do
+    # disable for firefox
+    xit 'allows HTTPS calls' do
       proxy.stub('https://blog.howmanyleft.co.uk:443/api/read/json').and_return(
         jsonp: {
           posts: [

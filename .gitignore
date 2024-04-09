@@ -4,3 +4,5 @@ log/test.log
 .idea/
 .ruby-version
 *.swp
+/tmp/*
+!/tmp/.keep

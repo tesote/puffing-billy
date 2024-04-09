@@ -1,12 +1,11 @@
-Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |f| require f }
-
 require 'pry'
+require 'active_support/core_ext/hash'
 require 'billy/capybara/rspec'
 require 'billy/watir/rspec'
 require 'rack'
 require 'logger'
 require 'fileutils'
-require 'webdrivers'
+Dir[File.expand_path('../support/**/*.rb', __FILE__)].each { |f| require f }
 
 $stdout.puts `#{::Selenium::WebDriver::Chrome::Service.driver_path.call} --version` if ENV['CI']
 
