@@ -2,7 +2,7 @@
 require File.expand_path('../lib/billy/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ['Olly Smith']
+  gem.authors       = ['Olly Smith', 'Tesote Engineering']
   gem.email         = ['olly.smith@gmail.com']
   gem.description   = 'A stubbing proxy server for ruby. Connect it to your browser in integration tests to fake interactions with remote HTTP(S) servers.'
   gem.summary       = 'Easy request stubs for browser tests.'
@@ -14,6 +14,11 @@ Gem::Specification.new do |gem|
   gem.version       = Billy::VERSION
   gem.required_ruby_version = '>= 2.7.0'
   gem.license       = 'MIT'
+
+  gem.metadata = {
+    'rubygems_mfa_required' => 'true',
+    'allowed_push_host' => 'https://gem.fury.io/tesote'
+  }
 
   gem.add_development_dependency 'rspec', '~> 3.13'
   gem.add_development_dependency 'thin', '~> 1.8.2'
