@@ -1,3 +1,3 @@
 module Billy
-  VERSION = '4.0.0-tesote.3'
+  VERSION = '4.0.0-tesote.4'
 end
